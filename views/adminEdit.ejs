@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit User</title>
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Include any additional styles or scripts as needed -->
+</head>
+
+<body>
+    <div class="container mt-5">
+        <!-- Add your edit page content here -->
+
+        <h2>Edit User</h2>
+        <% if (users) { %>
+            <% for( let i = 0; i < users.length; i++ ) { %>
+                <% console.log(users,'users edit') %>
+                <form action="/update" method="post">
+                    <!-- Populate the form with existing user data -->
+                    <div class="input-field">
+                        <input type="text" name="name" value=" <%= users[i].name %>" required />
+                        <label>Update name</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name="email" value="<%= users[i].email %>" required />
+                        <label>Update email</label>
+                    </div>
+                   
+                    <button type="submit">Update User</button>
+                </form>
+    
+            <% } %>
+         
+        <% } %>
+
+      
+    </div>
+</body>
+
+</html>

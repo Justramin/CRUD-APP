@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: relative; /* Added position relative to make room for the button */
+        }
+
+        .logout-button {
+            position: absolute;
+            top: 10px; /* Adjust the top position as needed */
+            right: 20px; /* Adjust the right position as needed */
+            padding: 10px;
+            background-color: #ff5733; /* Change the background color as desired */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome <%= userData %></h1>
+
+            <button class="logout-button" type="submit"><a href="/logout">Logout</a></button>
+        </a>
+    </header>
+      
+   
+
+    <div class="container">
+        <h2>Featured Content</h2>
+
+        <p>This is some content on the home page. You can add more sections and customize it as needed.</p>
+
+        <h3>Latest News</h3>
+
+        <p>Stay tuned for exciting updates and news!</p>
+    </div>
+
+    <footer>
+        &copy; 2024 Your Website. All rights reserved.
+    </footer>
+
+    <script>
+        function logout() {
+            // Add your logout logic here
+            alert("Logout clicked. Add your logout logic here.");
+        }
+    </script>
+</body>
+
+</html>

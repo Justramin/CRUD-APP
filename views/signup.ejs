@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup </title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    
+    <div class="container mt-5">
+
+         <!-- Display success flash message -->
+    <% if (messages.success) { %>
+        <div class="alert alert-success">
+            <%= messages.success %>
+        </div>
+    <% } %>
+
+    <!-- Display error flash message -->
+    <% if (messages.error) { %>
+        <div style="color:orange" class="alert alert-warning">
+            <%= messages.error %>
+        </div>
+    <% } %>
+    
+<form action="/signup" method="post">
+    <h2>Sign Up</h2>
+    <div class="input-field">
+        <input type="text" name="name" required />
+        <label>Enter name</label>
+    </div>
+    <div class="input-field">
+        <input type="text" name="email" required />
+        <label>Enter email</label>
+    </div>
+    <div class="input-field">
+        <input type="password" name="password" required />
+        <label>Enter password</label>
+    </div>
+    <button type="submit">Sign Up</button>
+
+    
+  
+</form>
+
+
+    </div>
+</body>
+
+</html>
